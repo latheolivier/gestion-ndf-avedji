@@ -1,0 +1,56 @@
+ /* table {
+     font-family: times, serif;
+     font-size: 10px;
+     background-color: red;
+ } */
+
+
+ @media print {
+
+
+
+     #table_resultat_2 table {
+         border-collapse: collapse;
+     }
+
+     #table_resultat_2 tr,
+     #table_resultat_2 th,
+     #table_resultat_2 td,
+     #table_resultat_2 thead tr {
+         border: 2px solid #000 !important;
+         text-align: center;
+     }
+
+
+
+     #container_print thead tr {
+         border: 2px solid #000 !important;
+         text-align: center;
+         color: black !important;
+     }
+
+     #container_print tr,
+     #container_print td,
+     #container_print thead th {
+         border: 1px solid #000 !important;
+         text-align: center;
+         color: black !important;
+     }
+
+
+     .active {
+         background-color: red !important;
+     }
+
+     #content_detail .active {
+         background-color: blue !important;
+     }
+
+
+
+
+
+
+
+
+ }

@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+
+<html lang="en" class="light-style layout-menu-fixed" dir="ltr" data-theme="theme-default" data-assets-path="../assets/"
+    data-template="vertical-menu-template-free">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+    <title>GESTION NOTRE DAME DE FATIMA D’AVEDJI</title>
+
+    <meta name="description" content="" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.ico" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Icons. Uncomment required icon fonts -->
+    <link rel="stylesheet" href="../assets/vendor/fonts/boxicons.css" />
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="../assets/vendor/css/core.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="../assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="../assets/css/demo.css" />
+
+    <!-- Vendors CSS -->
+    <link rel="stylesheet" href="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+
+    <!-- Page CSS -->
+
+    <!-- Helpers -->
+    <script src="../assets/vendor/js/helpers.js"></script>
+
+    <script src="../js/sweetalert.min.js" defer> </script>
+
+    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+    <script src="../assets/js/config.js"></script>
+
+    <script src="../app/helper_link.js" defer></script>
+    <script src="../app/sortie.js" defer></script>
+    <script src="../app/sortir_2.js" defer></script>
+
+
+    <!-- ##################### -->
+    <script src="../app/helper/helper_route.js" defer></script>
+    <script src="../app/helper/helper_fetch.js" defer></script>
+    <script src="../app/traitement/helper_content.js" defer></script>
+    <script src="../app/traitement/authentication.js" defer></script>
+
+    <script src="../app/traitement/sortie/sortir_2.js" defer></script>
+
+    <script src="../app/traitement/sortie/sortie.js" defer></script>
+    <!-- ##################### -->
+
+
+</head>
+
+
+<body>
+    <!-- Layout wrapper -->
+    <div class="layout-wrapper layout-content-navbar">
+        <div class="layout-container">
+            <!-- Menu -->
+
+            <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+                <div class="app-brand demo">
+
+                </div>
+
+                <div style="text-align: center; position: absolute;top:0px;width: 100%;">
+                    <center>
+                        <img src="../assets/img/259444299_4312914915486938_4090724346881757081_n.jpg"
+                            style="height: 200px;width: 100%;">
+
+                    </center>
+
+                </div>
+
+                <style>
+                    .menu-inner li a {
+                        font-size: 18px !important;
+                    }
+                </style>
+
+
+
+                <ul class="menu-inner py-1" style="margin-top: 150px;">
+
+
+
+
+
+
+                    <li class="menu-item" id="menu_paroissien" style="display: none;">
+                        <a href="app_tous_les_paroissiens.html" class="menu-link  ">
+                            <!-- <i class="menu-icon tf-icons bx bx-dock-top"></i> -->
+                            <i class='menu-icon tf-icons bx bx-user'></i>
+                            <div data-i18n="Account Settings">Paroissiens</div>
+                        </a>
+
+                    </li>
+
+
+
+
+
+
+
+                    <li class="menu-item " id="menu_demande_messe" style="display: none;">
+                        <a href="messe_commandees.html" class="menu-link ">
+                            <i class='menu-icon tf-icons bx bxs-church'></i>
+                            <div data-i18n="Authentications">Demande de messe</div>
+                        </a>
+
+                    </li>
+
+
+
+                    <li class="menu-item open active" id="menu_finance" style="display: none;">
+                        <a href="javascript:void(0);" class="menu-link menu-toggle">
+                            <i class='menu-icon tf-icons bx bx-credit-card'></i>
+                            <div data-i18n="Misc">Finances</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href="dashbord.html" class="menu-link">
+                                    <div data-i18n="Error">Tableau de bord</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="entree.html" class="menu-link">
+                                    <div data-i18n="Error">Entrée</div>
+                                </a>
+                            </li>
+                            <li class="menu-item active">
+                                <a href="sortie.html" class="menu-link">
+                                    <div data-i18n="Under Maintenance">Sortie</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="les_etats.html" class="menu-link">
+                                    <div data-i18n="Under Maintenance">Les états</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+
+                    <li class="menu-item" id="menu_utilisateur" style="display: none;">
+                        <a href="utilisateur.html" class="menu-link">
+                            <i class='menu-icon tf-icons bx bxs-user-circle'></i>
+                            <div data-i18n="Boxicons">Utilisateurs</div>
+                        </a>
+                    </li>
+
+
+
+
+
+                    <li class="menu-item mt-5" style="position: absolute;bottom: 50px;">
+                        <center>
+                            <button id="btn_deconnexion" class="btn btn-primary rounded-pill">Déconnexion</button>
+
+                        </center>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+                </ul>
+            </aside>
+            <!-- / Menu -->
+
+            <!-- Layout container -->
+            <div class="layout-page" style="background-color: #E7E7FF !important;">
+                <!-- Navbar -->
+
+
+                <!-- / Navbar -->
+
+                <!-- Content wrapper -->
+                <div class="content-wrapper">
+                    <!-- Content -->
+
+
+
+
+
+
+
+
+                    <div class="container-xxl flex-grow-1 container-p-y">
+                        <h4 class="fw-bold py-3 mb-4"> Les sorties de la paroisse</h4>
+
+                        <!-- Tabs -->
+                        <!-- <h5 class="py-3 my-4">Tabs</h5> -->
+
+                        <div class="row">
+
+
+
+
+                            <div class="col-xl-12">
+                                <div class="nav-align-top mb-4">
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li class="nav-item">
+                                            <button type="button" class="nav-link active" role="tab"
+                                                id="btn_click_sortir" data-bs-toggle="tab"
+                                                data-bs-target="#navs-top-home" aria-controls="navs-top-home"
+                                                aria-selected="true">
+                                                Les sorties
+                                            </button>
+                                        </li>
+                                        <li class="nav-item">
+                                            <button type="button" class="nav-link" role="tab" data-bs-toggle="tab"
+                                                data-bs-target="#navs-top-profile" aria-controls="navs-top-profile"
+                                                aria-selected="false">
+                                                Motif de payément
+                                            </button>
+                                        </li>
+
+                                    </ul>
+
+
+
+
+                                    <div class="tab-content">
+
+
+
+                                        <div class="tab-pane fade show active" id="navs-top-home" role="tabpanel">
+
+
+
+                                            <div class="d-flex justify-content-between">
+                                                <h5 class="card-header" id="total_paroissien"> </h5>
+                                                <div class="mt-3 " style="margin-right: 25px;">
+
+
+                                                    <button id="btn_a_sortir" class="btn btn-primary">
+                                                        <span><i class='bx bx-add-to-queue'></i></span> Ajouter
+                                                    </button>
+
+
+
+                                                </div>
+                                            </div>
+
+
+
+
+                                            <style>
+                                                .table-responsive {
+                                                    height: 600px;
+                                                    overflow: scroll;
+                                                }
+
+                                                thead tr:nth-child(1) th {
+                                                    /* background: rgb(45, 82, 231);
+                                                    color: #fff !important; */
+                                                    position: sticky;
+                                                    top: 0;
+                                                    z-index: 10;
+                                                }
+
+                                                #my_table_print th {
+                                                    font-weight: bold;
+                                                }
+
+                                                /*
+                                                #my_table_print {
+                                                    border-collapse: collapse !important;
+                                                }
+                
+                                                #my_table_print tr,
+                                                #my_table_print th,
+                                                #my_table_print td {
+                                                    border: 1px solid rgb(45, 82, 231) !important;
+                                                    border-collapse: collapse !important;
+                                                } */
+                                            </style>
+
+
+
+
+                                            <div class="table-responsive mt-5">
+                                                <table class="table table-bordered table-striped text-center ">
+                                                    <thead class="table-primary">
+                                                        <tr>
+                                                            <th> Date
+                                                            </th>
+                                                            <th> Motif
+                                                            </th>
+                                                            <th>
+                                                                Descriptions
+                                                            </th>
+                                                            <th>
+                                                                Bénéficiere
+                                                            </th>
+                                                            <th> Numéro de
+                                                                facture</th>
+                                                            <th> Montant
+                                                            </th>
+                                                            <th></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="content_sortir">
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+
+                                        </div>
+
+
+
+
+
+
+
+                                        <div class="tab-pane fade" id="navs-top-profile" role="tabpanel">
+
+
+
+                                            <div class="d-flex justify-content-between">
+                                                <h5 class="card-header" id="total_paroissien"> </h5>
+                                                <div class="mt-3 " style="margin-right: 25px;">
+
+
+                                                    <button id="btn_add_motif" class="btn btn-primary">
+                                                        <span><i class='bx bx-add-to-queue'></i></span> Ajouter
+                                                    </button>
+
+
+
+                                                </div>
+                                            </div>
+
+
+                                            <div class="table-responsive mt-5">
+                                                <table class="table table-bordered table-striped text-center ">
+                                                    <thead class="table-primary">
+                                                        <tr>
+                                                            <th> Motif
+                                                            </th>
+                                                            <th>
+                                                                Descriptions
+                                                            </th>
+                                                            <th style="width: 50px;"></th>
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="content_motif">
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+
+
+
+                                </div>
+                            </div>
+
+
+
+
+
+
+                        </div>
+
+
+                        <div class="content-backdrop fade"></div>
+                    </div>
+                    <!-- Content wrapper -->
+                </div>
+                <!-- / Layout page -->
+            </div>
+
+            <!-- Overlay -->
+            <div class="layout-overlay layout-menu-toggle"></div>
+        </div>
+        <!-- / Layout wrapper -->
+
+
+
+
+
+
+
+
+        <!-- ###########################################
+########################################### les motif
+########################################### -->
+
+
+
+        <div class="modal fade" id="ajouter_motif" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel3">Ajouter un motif</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body ">
+
+                        <div class="form-group col mb-3">
+                            <label for="">Motif</label>
+                            <input type="text" id="le_motif" class="form-control">
+                        </div>
+
+                        <div class="form-group col mb-3">
+                            <label for="">Description</label>
+                            <textarea class="form-control" name="" id="description_motif" cols="30" rows="5"></textarea>
+                        </div>
+
+
+
+
+
+
+
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                        <button type="button" id="btn_ajouter_motif" class="btn btn-primary btn_use">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="modal fade" id="modifier_motif" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel3">Modifier un utilisateur</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body ">
+
+                        <input type="hidden" id="id_modifer_motif" class="form-control">
+
+
+                        <div class="form-group col mb-3">
+                            <label for="">Motif</label>
+                            <input type="text" id="le_motif_m" class="form-control">
+                        </div>
+
+                        <div class="form-group col mb-3">
+                            <label for="">Description</label>
+                            <textarea class="form-control" name="" id="description_motif_m" cols="30"
+                                rows="5"></textarea>
+                        </div>
+
+
+
+
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                        <button type="button" id="btn_update_motif" class="btn btn-primary btn_use">Modifier</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <!-- ###########################################
+###########################################  les sortir
+########################################### -->
+
+
+
+        <div class="modal fade" id="ajouter_sortir_modal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel3">Ajouter sortir</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body ">
+
+
+                        <div class="form-group col mb-3">
+                            <label for="sexe_tuteur_m">Motif</label>
+                            <select class="form-control" id="votre_motif">
+                                <option id="">Séléctionner</option>
+                                <!--  <option>Publier notification</option>
+                                <option>Publier annonce</option>
+                                <option>Publier notification et annonce</option>
+                                <option>Administrateur</option> -->
+                            </select>
+                        </div>
+
+
+
+                        <div class="form-group col mb-3">
+                            <label for="">Description</label>
+                            <textarea class="form-control" name="" id="description_sortie" cols="30"
+                                rows="5"></textarea>
+                        </div>
+
+                        <div class="form-group col mb-3">
+                            <label for="">Bénéficiere</label>
+                            <input type="text" id="le_beneficiere" class="form-control">
+                        </div>
+
+                        <div class="form-group col mb-3">
+                            <label for="">Numéro de la facture</label>
+                            <input type="number" id="numero_facture" class="form-control">
+                        </div>
+
+                        <div class="form-group col mb-3">
+                            <label for="">Montant</label>
+                            <input type="number" id="montant" class="form-control">
+                        </div>
+
+
+
+
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                        <button type="button" id="btn_add_sortir" class="btn btn-primary btn_use">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="modal fade" id="modifier_sortir" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel3">Modifier sortir</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body ">
+
+                        <input type="hidden" id="id_modifer_sortir" class="form-control">
+                        <input type="hidden" id="la_daate" class="form-control">
+
+
+                        <div class="form-group col mb-3">
+                            <label for="sexe_tuteur_m">Motif</label>
+                            <select class="form-control" id="votre_motif_m">
+                                <!-- <option id="initail_m"></option>
+                                <option>Publier notification</option>
+                                <option>Publier annonce</option>
+                                <option>Publier notification et annonce</option>
+                                <option>Administrateur</option> -->
+                            </select>
+                        </div>
+
+
+
+                        <div class="form-group col mb-3">
+                            <label for="">Description</label>
+                            <textarea class="form-control" name="" id="description_sortie_m" cols="30"
+                                rows="5"></textarea>
+                        </div>
+
+                        <div class="form-group col mb-3">
+                            <label for="">Bénéficiere</label>
+                            <input type="text" id="le_beneficiere_m" class="form-control">
+                        </div>
+
+                        <div class="form-group col mb-3">
+                            <label for="">Numéro de la facture</label>
+                            <input type="number" id="numero_facture_m" class="form-control">
+                        </div>
+
+                        <div class="form-group col mb-3">
+                            <label for="">Montant</label>
+                            <input type="number" id="montant_m" class="form-control">
+                        </div>
+
+
+
+
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                        <button type="button" id="btn_update_sortir" class="btn btn-primary btn_use">Modifier</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Core JS -->
+        <!-- build:js assets/vendor/js/core.js -->
+        <script src="../assets/vendor/libs/jquery/jquery.js"></script>
+        <script src="../assets/vendor/libs/popper/popper.js"></script>
+        <script src="../assets/vendor/js/bootstrap.js"></script>
+        <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+        <script src="../assets/vendor/js/menu.js"></script>
+        <!-- endbuild -->
+
+        <!-- Vendors JS -->
+
+        <!-- Main JS -->
+        <script src="../assets/js/main.js"></script>
+
+        <!-- Page JS -->
+
+        <!-- Place this tag in your head or just before your close body tag. -->
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+
+</html>

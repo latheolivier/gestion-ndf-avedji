@@ -1,0 +1,51 @@
+#table_resultat_2 * {
+    color: #000 !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+#table_resultat_2 table {
+    width: 100%;
+    color: #000 !important;
+    text-align: center;
+}
+
+#table_resultat_2 tr,
+#table_resultat_2 th,
+#table_resultat_2 td {
+    border-collapse: collapse;
+    color: #000 !important;
+    border: 1px solid #000;
+}
+
+#table_resultat_2 tr {
+    height: 40px;
+}
+
+
+
+
+/* ############################### */
+
+
+#table_resultat_sortie * {
+    color: #000 !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+#table_resultat_sortie table {
+    width: 100%;
+    color: #000 !important;
+    text-align: center;
+}
+
+#table_resultat_sortie tr,
+#table_resultat_sortie th,
+#table_resultat_sortie td {
+    border-collapse: collapse;
+    color: #000 !important;
+    border: 1px solid #000;
+}
+
+#table_resultat_sortie tr {
+    height: 40px;
+}

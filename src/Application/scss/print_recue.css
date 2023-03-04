@@ -1,0 +1,65 @@
+@page {
+    size: A5;
+}
+
+
+#container_print_recue {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ############################# */
+#title_nom {
+    font-size: 15px !important;
+}
+
+#nom_recue {
+    font-size: 15px !important;
+    width: 50% !important;
+    border-bottom: 2px dotted #000 !important;
+}
+
+#title_date {
+    font-size: 15px !important;
+}
+
+#date_recue {
+    font-size: 15px !important;
+    width: 20% !important;
+    border-bottom: 2px dotted #000 !important;
+}
+
+/* ############################# */
+
+#title_type {
+    font-size: 15px !important;
+
+}
+
+#type_reccue {
+    font-size: 15px !important;
+    width: 85% !important;
+    border-bottom: 2px dotted #000 !important;
+}
+
+#title_celebre {
+    font-size: 15px !important;
+
+}
+
+#celebre_recue {
+    font-size: 15px !important;
+    width: 75% !important;
+    border-bottom: 2px dotted #000 !important;
+}
+
+/* ############################ */
+
+#title_intention {
+    margin-top: 15px !important;
+    font-size: 15px !important;
+}
+
+#intension_recue {
+    font-size: 15px !important;
+}

@@ -1,0 +1,1657 @@
+<!DOCTYPE html>
+
+<html lang="en" class="light-style layout-menu-fixed" dir="ltr" data-theme="theme-default" data-assets-path="../assets/"
+    data-template="vertical-menu-template-free">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+    <title>GESTION NOTRE DAME DE FATIMA D’AVEDJI</title>
+
+    <meta name="description" content="" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.ico" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Icons. Uncomment required icon fonts -->
+    <link rel="stylesheet" href="../assets/vendor/fonts/boxicons.css" />
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="../assets/vendor/css/core.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="../assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="../assets/css/demo.css" />
+
+    <!-- Vendors CSS -->
+    <link rel="stylesheet" href="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+
+    <!-- Page CSS -->
+
+    <!-- Helpers -->
+    <script src="../assets/vendor/js/helpers.js"></script>
+    <script src="../js/html2pdf.bundle.min.js" defer> </script>
+
+    <script src="../js/sweetalert.min.js" defer> </script>
+    <script src="../js/jquery.PrintArea.min.js" defer> </script>
+
+
+    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+    <script src="../assets/js/config.js"></script>
+
+
+    <!-- ##################### -->
+    <script src="../app/helper/helper_route.js" defer></script>
+    <script src="../app/helper/helper_fetch.js" defer></script>
+    <script src="../app/traitement/helper_content.js" defer></script>
+    <script src="../app/traitement/authentication.js" defer></script>
+
+    <script src="../app/traitement/messe/messe.js" defer></script>
+    <script src="../app/traitement/messe/recherche_messe.js" defer></script>
+    <!-- ##################### -->
+</head>
+
+<body>
+    <!-- Layout wrapper -->
+    <div class="layout-wrapper layout-content-navbar">
+        <div class="layout-container">
+            <!-- Menu -->
+
+            <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+                <div class="app-brand demo">
+
+                </div>
+
+                <div style="text-align: center; position: absolute;top:0px;width: 100%;">
+                    <center>
+                        <img src="../assets/img/259444299_4312914915486938_4090724346881757081_n.jpg"
+                            style="height: 200px;width: 100%;">
+
+                    </center>
+
+                </div>
+
+                <style>
+                    .menu-inner li a {
+                        font-size: 18px !important;
+                    }
+                </style>
+
+
+
+                <ul class="menu-inner py-1" style="margin-top: 150px;">
+
+
+
+
+
+
+                    <li class="menu-item" id="menu_paroissien" style="display: none;">
+                        <a href="app_tous_les_paroissiens.html" class="menu-link  ">
+                            <!-- <i class="menu-icon tf-icons bx bx-dock-top"></i> -->
+                            <i class='menu-icon tf-icons bx bx-user'></i>
+                            <div data-i18n="Account Settings">Paroissiens</div>
+                        </a>
+
+                    </li>
+
+
+
+
+
+                    <style>
+                        #title_active {
+                            font-size: 17px !important;
+                        }
+                    </style>
+
+                    <li class="menu-item active" id="menu_demande_messe" style="display: none;">
+                        <a href="messe_commandees.html" class="menu-link ">
+                            <i class='menu-icon tf-icons bx bxs-church'></i>
+                            <div data-i18n="Authentications" id="title_active">Demande de messe</div>
+                        </a>
+
+                    </li>
+
+
+
+                    <li class="menu-item" id="menu_finance" style="display: none;">
+                        <a href="javascript:void(0);" class="menu-link menu-toggle">
+                            <i class='menu-icon tf-icons bx bx-credit-card'></i>
+                            <div data-i18n="Misc">Finances</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href="dashbord.html" class="menu-link">
+                                    <div data-i18n="Error">Tableau de bord</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="entree.html" class="menu-link">
+                                    <div data-i18n="Error">Entrée</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="sortie.html" class="menu-link">
+                                    <div data-i18n="Under Maintenance">Sortie</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="les_etats.html" class="menu-link">
+                                    <div data-i18n="Under Maintenance">Les états</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+
+                    <li class="menu-item" id="menu_utilisateur" style="display: none;">
+                        <a href="utilisateur.html" class="menu-link">
+                            <i class='menu-icon tf-icons bx bxs-user-circle'></i>
+                            <div data-i18n="Boxicons">Utilisateurs</div>
+                        </a>
+                    </li>
+
+
+
+
+
+                    <li class="menu-item mt-5" style="position: absolute;bottom: 50px;">
+                        <center>
+                            <button id="btn_deconnexion" class="btn btn-primary rounded-pill">Déconnexion</button>
+
+                        </center>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+                </ul>
+            </aside>
+            <!-- / Menu -->
+
+            <!-- Layout container -->
+            <div class="layout-page" style="background-color: #E7E7FF !important;">
+                <!-- Navbar -->
+
+
+                <!-- / Navbar -->
+
+
+
+
+
+
+
+                <div class="content-wrapper">
+                    <!-- Content -->
+
+                    <div class="container-xxl flex-grow-1 container-p-y">
+
+
+
+
+                        <!-- Bordered Table -->
+                        <div class="card">
+
+                            <div class="d-flex justify-content-between">
+
+                                <h5 style="display: none;" class="card-header" id="total_paroissien"> </h5>
+
+                                <h4 class="card-header mt-2"> Les demandes de messes
+                                    <!-- <span><button id="all_detail" type="button"
+                                            class="btn btn-sm btn-icon btn-outline-primary">
+
+                                            <i class='bx bx-detail'></i>
+                                        </button>
+                                    </span> -->
+                                </h4>
+
+
+
+
+                                <div class="mt-3 " style="margin-right: 25px;">
+
+
+                                    <button id="btn_add" class="btn btn-primary">
+                                        <span><i class='bx bx-add-to-queue'></i></span>
+                                        Ajouter
+                                    </button>
+
+
+
+                                    <!-- ########################################### -->
+                                    <!-- <button id="btn_reacherche" class="btn btn-primary">
+                                        <span><i class='bx bx-search-alt-2'></i></span>
+                                        Rechercher
+                                    </button> -->
+
+                                    <!-- ########################################### -->
+
+
+
+
+                                    <div class="btn-group" style="display: none;" id="dropdown-icon-demo">
+                                        <button type="button" class="btn btn-primary dropdown-toggle"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class='bx bx-search-alt-2'></i>Rechercher
+                                        </button>
+
+                                        <ul class="dropdown-menu">
+
+                                            <li id="btn_les_filtres">
+                                                <a href="javascript:void(0);"
+                                                    class="dropdown-item d-flex align-items-center"><i
+                                                        class="bx bx-chevron-right scaleX-n1-rtl"></i>Rajouter les
+                                                    filtres automatique </a>
+                                            </li>
+
+                                            <hr class="dropdown-divider" />
+
+                                            <li id="recherche_messe_aujourdhui">
+                                                <a href="javascript:void(0);"
+                                                    class="dropdown-item d-flex align-items-center"><i
+                                                        class="bx bx-chevron-right scaleX-n1-rtl"></i>Messes commandées
+                                                    pour aujourd’hui </a>
+                                            </li>
+                                            <li id="recherche_messe_demain">
+                                                <a href="javascript:void(0);"
+                                                    class="dropdown-item d-flex align-items-center"><i
+                                                        class="bx bx-chevron-right scaleX-n1-rtl"></i>Messes commandées
+                                                    pour demain </a>
+                                            </li>
+                                            <li id="recherche_autre_date">
+                                                <a href="javascript:void(0);"
+                                                    class="dropdown-item d-flex align-items-center"><i
+                                                        class="bx bx-chevron-right scaleX-n1-rtl"></i>
+                                                    Rechercher une autre date</a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+
+
+
+                                    <div class="btn-group" id="dropdown-icon-demo" style="">
+                                        <button type="button" class="btn btn-primary dropdown-toggle"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class='bx bx-search-alt-2'></i>Recherche
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li id="mese_a_celebre">
+                                                <a href="javascript:void(0);"
+                                                    class="dropdown-item d-flex align-items-center"><i
+                                                        class="bx bx-chevron-right scaleX-n1-rtl"></i>
+                                                    Messe à célébrer </a>
+                                            </li>
+
+                                            <hr class="dropdown-divider" />
+
+                                            <li id="situation_de_demande">
+                                                <a href="javascript:void(0);"
+                                                    class="dropdown-item d-flex align-items-center"><i
+                                                        class="bx bx-chevron-right scaleX-n1-rtl"></i>
+                                                    Situation des demandes </a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+
+
+
+
+
+
+
+
+                                    <button id="btn_actualiser" class="btn btn-success">
+                                        <i class='bx bx-refresh'></i>
+                                        Réatualiser
+                                    </button>
+
+                                    <!-- <button id="btn_imprimer_resultat" class="btn btn-outline-secondary">
+                                        <i class='bx bx-printer'></i>
+                                        Imprimer
+                                    </button> -->
+
+
+
+                                    <div class="btn-group" id="dropdown-icon-demo" style="">
+                                        <button type="button" class="btn btn-primary dropdown-toggle"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class='bx bx-printer'></i></i>Imprimer
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li id="btn_imprimer_resultat">
+                                                <a href="javascript:void(0);"
+                                                    class="dropdown-item d-flex align-items-center"><i
+                                                        class="bx bx-chevron-right scaleX-n1-rtl"></i>
+                                                    Imprimer messe à célébrer </a>
+                                            </li>
+
+                                            <hr class="dropdown-divider" />
+
+                                            <li id="demander_imprimer_situation">
+                                                <a href="javascript:void(0);"
+                                                    class="dropdown-item d-flex align-items-center"><i
+                                                        class="bx bx-chevron-right scaleX-n1-rtl"></i>
+                                                    Imprimer situation des demandes </a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            <style>
+                                .table-responsive {
+                                    height: 600px;
+                                    overflow: scroll;
+                                }
+
+                                thead tr:nth-child(1) th {
+                                    /* background: rgb(45, 82, 231);
+                                    color: #fff !important; */
+                                    position: sticky;
+                                    top: 0;
+                                    z-index: 10;
+                                }
+
+                                #my_table_print th {
+                                    font-weight: bold;
+                                }
+
+                                /*
+                                #my_table_print {
+                                    border-collapse: collapse !important;
+                                }
+
+                                #my_table_print tr,
+                                #my_table_print th,
+                                #my_table_print td {
+                                    border: 1px solid rgb(45, 82, 231) !important;
+                                    border-collapse: collapse !important;
+                                } */
+                            </style>
+                            <div class="card-body">
+                                <h5 id="title_date_2"></h5>
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-bordered table-hover   text-center"
+                                        id="my_table_print">
+                                        <thead class="table-primary"
+                                            style="text-align: center; font-weight: bold;color: white;height: 50px;">
+                                            <tr>
+                                                <th style="border: none !important;">Date de demande</th>
+                                                <th style="border: none !important;">Date de la messe</th>
+                                                <th style="border: none !important;">Type de messe </th>
+                                                <th style="border: none !important;">Heure de la messe </th>
+                                                <th style="border: none !important;">Auteur</th>
+
+                                                <th style="border: none !important;">Montant</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="tbodyDiv" id="content_les_messes">
+
+
+
+                                        </tbody>
+                                    </table>
+
+                                    <!-- PAGINATION -->
+                                    <div class="d-flex justify-content-end mt-3" id="pagination_link">
+
+                                    </div>
+
+                                    <!-- PAGINATION  -->
+                                </div>
+                            </div>
+                        </div>
+                        <!--/ Bordered Table -->
+
+
+
+                    </div>
+                    <!-- / Content -->
+
+                    <!-- Footer -->
+
+                    <!-- / Footer -->
+
+                    <div class="content-backdrop fade"></div>
+                </div>
+                <!-- Content wrapper -->
+            </div>
+            <!-- / Layout page -->
+        </div>
+
+        <!-- Overlay -->
+        <div class="layout-overlay layout-menu-toggle"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <!-- / Layout wrapper -->
+
+
+
+    <!-- ###########################################
+###########################################
+########################################### -->
+
+    <style>
+        #largeModal .modal-body {
+            height: 70vh;
+            overflow-x: auto;
+        }
+
+        #largeModal .modal-body label {
+            font-size: 13px !important;
+        }
+    </style>
+
+
+
+
+    <!-- Large Modal -->
+    <!-- <div class="modal fade" id="largeModal" tabindex="-1" aria-hidden="true"> -->
+    <div class="modal fade" id="largeModal" data-bs-backdrop="static" tabindex="-1">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="title_modal">Ajouter une demande de messe</h5>
+                    <button onclick="close_modale()" type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+
+                <!-- my progress container -->
+                <div id="progess_container_2" class="progress mt-3"
+                    style="height: 0px;   margin-left: 20px; margin-right: 30px;">
+                    <div id="my_progress_2" class="progress-bar progress-bar-striped progress-bar-animated"
+                        role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+
+                <div class="modal-body">
+
+
+                    <!-- ################  Paroisse ################ -->
+                    <div class="row">
+                        <div class="col mb-3">
+                            <label for="nom_Paroisse" class="form-label">Paroisse *</label>
+                            <input type="text" id="nom_Paroisse" value="NDF Avedji" class="form-control " disabled />
+                        </div>
+                    </div>
+                    <!-- ################  Demandé par ################ -->
+                    <div class="row">
+                        <div class="col mb-3">
+                            <label for="nom_paroissien" class="form-label">Demandé par *</label>
+
+                            <div class="mb-2">
+                                <button type="button" id="btn_search_paroissien" class="btn btn-outline-primary">
+                                    <i class='bx bx-user'></i> Séléctionner un paroissien
+                                </button>
+                            </div>
+
+
+                            <input placeholder="Nom du paroissien ou du démandeur de la messe" type="text"
+                                id="nom_paroissien" class="form-control " />
+
+                        </div>
+                    </div>
+                    <!-- ################  Type de la messe ################ -->
+
+
+                    <div class="row">
+                        <div class="mb-3">
+                            <label for="type_de_messe" class="form-label">Type de la messe *</label>
+                            <select class="form-select" id="type_de_messe" aria-label="Default select example">
+                                <option value="">Sélectionner...</option>
+                                <option>Messe de la semaine</option>
+                                <option>Messe du dimanche</option>
+                                <option>Messe chantée</option>
+                                <option>Tridumm de messe</option>
+                                <option>Neuvaine de messe </option>
+                                <option>Trentaine de messe</option>
+                                <option>Messe de requiem</option>
+                                <option>Messe spéciale</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- ################  Date de la messe ################ -->
+                    <div class="row" id="field_date_de_la_messe" style="display: none;">
+                        <div class="col mb-3">
+                            <label for="date_de_la_messe" class="form-label">Date de la messe *</label>
+                            <input type="date" id="date_de_la_messe" class="form-control " />
+                        </div>
+                    </div>
+
+                    <!-- ################  Période de la messe ################ -->
+                    <div class="row mt-2" id="field_periode_date" style="display: none;">
+                        <div class="col mb-3">
+                            <label for="" class="form-label">Période de la messe *</label>
+
+                            <br>
+                            <label for="date_de_debut" class="form-label">Date de début *</label>
+                            <input type="date" id="date_de_debut" class="form-control " />
+
+                            <br>
+                            <!-- <label for="nombre_jour" class="form-label">Nombre de jours</label> -->
+                            <input placeholder="Nombre de jours" type="number" id="nombre_jour" class="form-control " />
+
+
+                            <label for="date_de_fin" class="form-label">Date de fin *</label>
+                            <input type="text" id="date_de_fin" class="form-control" disabled />
+
+                        </div>
+                    </div>
+
+
+
+                    <!-- ################  Heure de la messe ################ -->
+
+                    <div class="mb-3" id="heure_messe_select" style="display: none;">
+                        <label for="heure_messe" class="form-label">Heure de la messe *</label>
+                        <select class="form-select" id="heure_messe">
+
+
+                        </select>
+                    </div>
+
+
+                    <div class="mb-3" id="heure_messe_input" style="display: none;">
+                        <label for="heure_messe_field" class="form-label">Heure de la messe *</label>
+                        <input type="text" id="heure_messe_field" class="form-control " />
+
+                    </div>
+
+
+
+
+
+
+
+
+
+                    <div class="mb-3">
+                        <label for="" class="col-form-label">Montant *</label>
+                        <div class="input-group">
+                            <input type="number" class="form-control" id="montant">
+                            <span class="input-group-text" id="basic-addon2">FCFA</span>
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+
+
+
+                    <div class="mb-3">
+                        <label for="heure_messe" class="form-label">L’intention de la messe *</label>
+
+
+                        <form class="mb-5">
+
+                            <div class="form-check mt-3">
+                                <input name="default-radio-1" class="form-check-input" type="radio" value=""
+                                    id="intention_1" />
+                                <label class="form-check-label" for="intention_1">
+                                    AG au Sgr pour tous ses bienfaits dans sa vie et celle de sa famille. Demande la PD,
+                                    la
+                                    BD et l’assistance du Saint-Esprit sur lui/elle et sur toute sa famille par
+                                    l’intercession de la VM.
+
+                                </label>
+                            </div>
+
+
+
+
+                            <div class="form-check mt-3  ">
+                                <input name="default-radio-1" class="form-check-input" type="radio" value=""
+                                    id="intention_2" />
+                                <label class="form-check-label" for="intention_2">
+                                    AG au Sgr pour tous ses bienfaits à l’occasion de son anniversaire de …… . Demande
+                                    la
+                                    PD, la BD et l’assistance du Saint-Esprit sur lui/elle et sur toute sa famille par
+                                    l’intercession de la VM.
+
+                                </label>
+                            </div>
+
+
+                            <div class="form-check mt-3  ">
+                                <input name="default-radio-1" class="form-check-input" type="radio" value=""
+                                    id="intention_3" />
+                                <label class="form-check-label" for="intention_3">
+                                    Messe pour le repos en Dieu de l’âme de …. Sans oublier les âmes du purgatoire et
+                                    les
+                                    enfants avortés
+
+                                </label>
+                            </div>
+
+
+
+                            <div class="form-check mt-3  ">
+                                <input name="default-radio-1" class="form-check-input" type="radio" value=""
+                                    id="intention_4" />
+                                <label class="form-check-label" for="intention_4">
+                                    AG au Sgr pour tous ses bienfaits dans sa vie. Prie pour une intention particulière
+                                </label>
+                            </div>
+
+                        </form>
+
+
+
+
+                        <textarea class="form-control" id="intenssion_de_la_messe" cols="30" rows="5"></textarea>
+                    </div>
+
+
+                    <!-- 
+                        <div class="row g-2">
+                            <div class="col mb-0">
+                            <label for="emailLarge" class="form-label">Email</label>
+                            <input type="text" id="emailLarge" class="form-control" placeholder="xxxx@xxx.xx" />
+                            </div>
+                            <div class="col mb-0">
+                            <label for="dobLarge" class="form-label">DOB</label>
+                            <input type="text" id="dobLarge" class="form-control" placeholder="DD / MM / YY" />
+                            </div>
+                        </div> -->
+
+                </div>
+
+                <div class="modal-footer" id="mes_bouton">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                        Annuler
+                    </button>
+                    <button type="button" onclick="add_messe()" id="add_messe" class="btn btn-primary">Ajouter</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="modal fade" id="modifier_utilisateur" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel3">Modifier un utilisateur</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body ">
+
+                    <input type="hidden" id="id_modifer_util" class="form-control">
+
+
+                    <div class="form-group">
+                        <label for="">Nom d'utilisateur</label>
+                        <input type="text" id="nom_user_m" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Mot de asse</label>
+
+                        <input type="text" id="passe_m" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sexe_tuteur_m">Role</label>
+                        <select class="form-control" id="role_m">
+                            <option id="role_initial"></option>
+                            <option>Publier notification</option>
+                            <option>Publier annonce</option>
+                            <option>Publier notification et annonce</option>
+                            <option>Administrateur</option>
+                        </select>
+                    </div>
+
+
+
+
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                    <button type="button" id="btn_update_utilisateur" class="btn btn-primary btn_use">Modifier</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- ###########################################
+###########################################
+########################################### -->
+
+    <style>
+        #resultat_recherche .modal-body {
+            height: 75vh;
+            overflow-x: auto;
+
+        }
+    </style>
+
+    <!-- Large Modal -->
+    <div class="modal fade" id="resultat_recherche" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog " role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel3">Recherche</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="row">
+                        <div class="col mb-3">
+                            <!-- <label for="nom_Paroisse" class="form-label">Paroisse *</label> -->
+                            <input type="search" id="btn_lancer_recherche" class="form-control "
+                                placeholder="Rechercher un paroissien" />
+                        </div>
+                    </div>
+
+                    <table class="table table-bordered">
+                        <thead style="font-weight: bold;">
+                            <tr>
+                                <th>Nom</th>
+                                <th>Prénom</th>
+                                <th>Sexe</th>
+                                <th>PROFESSION </th>
+
+                            </tr>
+                        </thead>
+                        <tbody id="content_recherche_les_paroissuen">
+
+
+
+
+                        </tbody>
+                    </table>
+
+
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- 
+    <div class="modal fade" id="modal_recherche" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog " role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel3">Recherche</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+
+
+
+
+
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck3" />
+                        <label class="form-check-label" for="defaultCheck3"> Lister les demandes de messe d’une date
+                            donnée
+                        </label>
+                    </div>
+
+
+
+                    <div class="row mr-3 mt-3" id="demane_heure" style="display: none;">
+                        <div class="col mb-3">
+                            <label for="date_choisie_1">La date *</label>
+                            <input placeholder="Votre date" type="date" id="date_choisie_1" class="form-control " />
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" />
+                        <label class="form-check-label" for="defaultCheck2"> Lister les demandes de messe d’une date à
+                            une date donnée
+                        </label>
+                    </div>
+
+
+                    <div class="mr-3 mt-3" id="demande_de_messe_a_b" style="display: none;">
+                        <div class="row">
+                            <div class="col mb-3">
+                                <label for="date_choisie_2">La date de début *</label>
+                                <input placeholder="Date de début" type="date" id="date_choisie_2" value="NDF Avedji"
+                                    class="form-control " />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col mb-3">
+                                <label for="date_choisie_3">La date de fin *</label>
+                                <input placeholder="Date de fin" type="date" id="date_choisie_3" value="NDF Avedji"
+                                    class="form-control " />
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+            
+
+
+                    <div class="row mt-3">
+                        <div class="d-grid gap-2 col-lg-12 mx-auto">
+                            <button id="btn_lancer_filtre" class="btn btn-primary btn-lg" type="button">Lancer la
+                                recherche</button>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </div> -->
+
+
+
+
+
+
+
+    <div class="modal fade" id="modal_recherche_2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog " role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel3">Recherche</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+
+
+
+                    <input type="hidden" id="type_de_recherche" class="form-control">
+
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck3" />
+                        <label class="form-check-label" for="defaultCheck3" id="label_1"> Lister les demandes de messe
+                            d’une date
+                            donnée
+                        </label>
+                    </div>
+
+
+
+                    <div class="row mr-3 mt-3" id="demane_heure" style="display: none;">
+                        <div class="col mb-3">
+                            <label for="date_choisie_1">La date *</label>
+                            <input placeholder="Votre date" type="date" id="date_choisie_1" class="form-control " />
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" />
+                        <label class="form-check-label" for="defaultCheck2" id="label_2"> Lister les demandes de messe
+                            d’une date à
+                            une date donnée
+                        </label>
+                    </div>
+
+
+                    <div class="mr-3 mt-3" id="demande_de_messe_a_b" style="display: none;">
+                        <div class="row">
+                            <div class="col mb-3">
+                                <label for="date_choisie_2">La date de début *</label>
+                                <input placeholder="Date de début" type="date" id="date_choisie_2" value="NDF Avedji"
+                                    class="form-control " />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col mb-3">
+                                <label for="date_choisie_3">La date de fin *</label>
+                                <input placeholder="Date de fin" type="date" id="date_choisie_3" value="NDF Avedji"
+                                    class="form-control " />
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                    <!-- <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck4" />
+                        <label class="form-check-label" for="defaultCheck4"> Rechercher en fonction de leurs
+                            confirmation </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck5" />
+                        <label class="form-check-label" for="defaultCheck5"> Rechercher en fonction de leurs
+                            associations auxquelles
+                            ils
+                            appartiennent </label>
+                    </div> -->
+
+
+
+                    <div class="row mt-3">
+                        <div class="d-grid gap-2 col-lg-12 mx-auto">
+                            <button id="btn_lancer_filtre_2" class="btn btn-primary btn-lg" type="button">Lancer la
+                                recherche</button>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <style>
+        #model_print .modal-body {
+            height: 75vh;
+            overflow-x: auto;
+
+        }
+    </style>
+
+
+
+    <div class="modal fade" id="model_print" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel3"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+
+
+
+                    <div id="container_print" class="container-fluid" style="font-family: Arial, Helvetica, sans-serif !important;
+                    color: black !important;">
+                        <div
+                            style="display: flex;flex-direction: row;justify-content: space-between;align-items: center;">
+                            <div>
+                                <p style="font-size: 22px;font-weight: bold;">ARCHIDIOCES DE LOME</p>
+                                <p style="font-size: 18px;font-weight: bold;margin-top: -15px;">Paroisse Notre Dame de
+                                    Fatima </p>
+                                <p style="font-size: 14px;font-weight: bold;margin-top: -15px;">Adresse : Avedji </p>
+                                <p style="font-size: 14px;font-weight: bold;margin-top: -15px;">Tel : </p>
+                                <p style="font-size: 14px;font-weight: bold;margin-top: -15px;">BP : 8840 lomé </p>
+                            </div>
+                            <div style="margin-top: 10px;">
+                                <img src="../null.001.png" alt="" height="130px">
+                            </div>
+
+                        </div>
+
+
+
+                        <br>
+
+                        <div>
+                            <center>
+                                <p contenteditable="true" style="text-transform: uppercase;
+                                font-weight: bold;font-size: 18px;
+                                ">LA LISTE DES INTENTIONS </p>
+                            </center>
+                        </div>
+
+
+
+                        <div>
+
+                            <p id="la_date_filtre" contenteditable="true" style=" 
+                                font-weight: bold;font-size: 15px;
+                                ">Date : </p>
+
+                        </div>
+
+                        <div id="contenue_les_messed_print">
+
+
+
+                            <!-- <div>
+                                <p style="font-size: 15px;">
+                                    <strong>1</strong>
+                                    AG et remerciement au Sgr pour ses ouevres dans sa vie et lui
+                                    confie
+                                    son entretien qui
+                                    aura lieu bientôt.
+                                    <br>
+
+                                    <span>
+                                        7 ème jour --
+                                    </span>
+                                    <span>
+                                        Messe de Neuvaine --
+                                    </span>
+                                    <span>
+                                        Demandée par un chretien -- 12:15:00
+                                    </span>
+
+                                </p>
+                            </div> -->
+
+
+
+
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+
+                </div>
+
+                <div class="modal-footer">
+
+                    <button type="button" id="btn_imprimer_2" class="btn btn-primary">imprimer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <style>
+        #container_print_recue {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #000 !important;
+        }
+    </style>
+
+
+
+
+
+    <div class="modal fade" id="model_print_recue" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel3"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+
+
+                    <div id="container_print_recue">
+
+                        <center>
+                            <div style="margin-top: 10px;">
+                                <img src="../ENTENTE.png" alt="" width="95%">
+                            </div>
+                        </center>
+
+
+
+
+
+
+                        <br>
+
+                        <div>
+                            <center>
+                                <p style="text-transform: uppercase;
+                                font-weight: bold;font-size: 18px;
+                                ">RECU DEMANDE DE MESSE </p>
+                            </center>
+                        </div>
+
+
+                        <div class="mt-5">
+
+
+                            <div style="display: flex;flex-direction: row;">
+
+                                <div id="title_nom" style="font-size: 18px;">Nom : </div>
+
+                                <div id="nom_recue" style="
+                                margin-left: 20px;
+                                font-size: 18px;
+                                width: 50%;  border-bottom: 3px dotted #000;
+                                text-decoration: none;" contenteditable="true">
+                                    appoh hippolyte
+                                </div>
+
+                                <div id="title_date" style="margin-left: 10px; font-size: 18px;">Date : </div>
+
+                                <div id="date_recue" style="
+                                margin-left: 20px;
+                                font-size: 18px;
+                                width: 20%;  border-bottom: 3px dotted #000;
+                                text-decoration: none;" contenteditable="true">
+                                    22/01/2023
+                                </div>
+
+
+                            </div>
+
+
+
+
+
+                            <div class="mt-2" style=" display: flex;flex-direction: row;">
+
+                                <div id="title_type" style="font-size: 18px;">Type : </div>
+
+                                <div id="type_reccue" style="
+                                margin-left: 20px;
+                                font-size: 18px;
+                                width: 85%;  border-bottom: 3px dotted #000;
+                                text-decoration: none;" contenteditable="true">
+                                    appoh hippolyte
+                                </div>
+                            </div>
+
+                            <div class="mt-2" style=" display: flex;flex-direction: row;">
+                                <div id="title_celebre" style=" margin-left: 10px; font-size: 18px;">
+                                    A célébré : </div>
+
+                                <div id="celebre_recue" style="
+                                margin-left: 20px;
+                                font-size: 18px;
+                                width: 80%;  border-bottom: 3px dotted #000;
+                                text-decoration: none;" contenteditable="true">
+                                    22/01/2023
+                                </div>
+                            </div>
+
+
+
+                            <div class="mt-2">
+                                <div id="title_intention" style="font-size: 18px;">Intention </div>
+                                <div id="intension_recue" style="width: 100%;font-size: 18px;">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore debitis, maxime
+                                    perferendis aliquid ratione excepturi eligendi voluptates. Nihil aut incidunt optio
+                                    itaque tempora praesentium, eos laborum, vitae eligendi facere omnis.
+                                </div>
+                            </div>
+
+
+
+                            <div class="mt-2" style=" display: flex;justify-content: flex-end;">
+                                <div id="dates_enregistrement">Lomé le 20801/2023</div><br>
+                            </div>
+
+                            <div class="mt-2" style=" display: flex;justify-content: flex-end;">
+                                <div style="text-transform: capitalize;" id="la_personne">Appoh hippolyte</div>
+                            </div>
+
+
+                        </div>
+
+
+
+
+
+
+
+
+
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+
+                <div class="modal-footer">
+
+                    <button type="button" id="btn_print_recue" class="btn btn-primary">imprimer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ###########################################
+###########################################
+########################################### -->
+
+
+
+
+
+
+
+
+    <!-- ###########################################
+###########################################
+########################################### -->
+
+    <style>
+        #detail_messe_commande .modal-body {
+            height: 65vh;
+            overflow-x: auto;
+
+        }
+
+        #detail_messe_commande .active {
+            color: #fff !important;
+            font-weight: bold;
+
+        }
+    </style>
+
+    <!-- Large Modal -->
+    <div class="modal fade" id="detail_messe_commande" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel3">Détail de la messe</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+
+                    <div class="card mb-4">
+                        <div class="card-body" id="content_detail">
+                            <div class="row">
+                                <!-- Basic List group -->
+                                <div class="col-lg-12 mb-4 mb-xl-0">
+                                    <div class="demo-inline-spacing mt-3">
+
+                                        <style>
+                                            #conteneur_detail_messe * {
+                                                color: black !important;
+
+                                            }
+                                        </style>
+
+                                        <div class="list-group" id="conteneur_detail_messe">
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                            </div>
+                        </div>
+
+
+                        <!-- <hr class="m-0" /> -->
+
+
+
+                    </div>
+
+
+
+
+
+
+
+
+                </div>
+
+                <div class="modal-footer">
+
+                    <!-- <button type="button" id="btn_print_detail" class="btn btn-default">
+                        <i class='bx bx-printer'></i>
+                        Imprimer</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ###########################################
+###########################################
+########################################### -->
+
+    <style>
+        #filtrage .modal-body {
+            height: 75vh;
+            overflow-x: auto;
+
+        }
+
+        #contenue_les_messed_print table {
+            border-collapse: collapse !important;
+            width: 100%;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #contenue_les_messed_print table th,
+        #contenue_les_messed_print table tr,
+        #contenue_les_messed_print table td {
+            border-collapse: collapse !important;
+            border: 1px solid #000;
+        }
+
+        #contenue_les_messed_print table th {
+            height: 50px;
+
+        }
+
+        #contenue_les_messed_print table td {
+            padding: 10px;
+            font-size: 15px;
+        }
+    </style>
+
+    <!-- Large Modal -->
+    <div class="modal fade" id="imprimer_etat_demande" tabindex="-1" aria-hidden="true">
+        <!-- <div class="modal-dialog modal-fullscreen" role="document"> -->
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel3"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+
+
+
+                    <div id="container_print_etat_situation" class="container-fluid" style="font-family: Arial, Helvetica, sans-serif !important;
+                    color: black !important;">
+                        <div
+                            style="display: flex;flex-direction: row;justify-content: space-between;align-items: center;">
+                            <div>
+                                <p style="font-size: 22px;font-weight: bold;">ARCHIDIOCES DE LOME</p>
+                                <p style="font-size: 18px;font-weight: bold;margin-top: -15px;">Paroisse Notre Dame de
+                                    Fatima </p>
+                                <p contenteditable="true" style="font-size: 14px;font-weight: bold;margin-top: -15px;">
+                                    Adresse : Avedji
+                                </p>
+                                <p contenteditable="true" style="font-size: 14px;font-weight: bold;margin-top: -15px;">
+                                    Tel : </p>
+                                <p contenteditable="true" style="font-size: 14px;font-weight: bold;margin-top: -15px;">
+                                    BP : 8840 lomé
+                                </p>
+                            </div>
+                            <div style="margin-top: 10px;">
+                                <img src="../null.001.png" alt="" height="130px">
+                            </div>
+
+                        </div>
+
+
+
+                        <br>
+
+                        <div>
+                            <center>
+                                <p id="id_titre_situation_demande" style="text-transform: uppercase;
+                                font-weight: bold;font-size: 18px;
+                                ">Situation de messe </p>
+                            </center>
+                        </div>
+
+
+
+
+                        <div id="contenue_les_messed_print">
+
+
+
+                            <table class=" ">
+                                <thead style="font-weight: bold;; ">
+
+                                    <tr style="text-transform: capitalize">
+                                        <th>DATE DE DEMANDE</th>
+                                        <th>DATE DE LA MESSE</th>
+                                        <th>TYPE DE MESSE</th>
+                                        <th>HEURE DE LA MESSE</th>
+                                        <!-- <th>Age</th> -->
+                                        <th>AUTEUR</th>
+                                        <th>MONTANT</th>
+                                    </tr>
+
+                                </thead>
+                                <tbody id="content_etat_de_demande">
+
+
+
+                                </tbody>
+                            </table>
+
+
+
+
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+                </div>
+
+                <div class="modal-footer">
+
+                    <button type="button" id="btn_imprimer_3" class="btn btn-primary">imprimer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Core JS -->
+    <!-- build:js assets/vendor/js/core.js -->
+    <script src="../assets/vendor/libs/jquery/jquery.js"></script>
+
+
+    <!-- context menu -->
+    <!-- <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.contextMenu.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.contextMenu.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.ui.position.js"></script>
+ -->
+
+
+    <link rel="stylesheet" href="../scss/jquery.contextMenu.min.css">
+    <script src="../js/jquery.contextMenu.min.js"></script>
+    <script src="../js/jquery.ui.position.js"></script>
+
+    <script src="../assets/vendor/libs/popper/popper.js"></script>
+    <script src="../assets/vendor/js/bootstrap.js"></script>
+    <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+    <script src="../assets/vendor/js/menu.js"></script>
+    <!-- endbuild -->
+
+    <!-- Vendors JS -->
+
+    <!-- Main JS -->
+    <script src="../assets/js/main.js"></script>
+
+    <script src="../assets/js/ui-toasts.js"></script>
+
+    <!-- Page JS -->
+    <script src="../assets/js/pages-account-settings-account.js"></script>
+
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+
+    <script>
+
+    </script>
+</body>
+
+</html>
