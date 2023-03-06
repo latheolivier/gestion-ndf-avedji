@@ -9,8 +9,8 @@ module.exports = {
       name: '@electron-forge/publisher-github',
       config: {
         repository: {
-          owner: 'hippolyteAppoh',
-          name: 'Gestion-paroisse-ndf-avedji',
+          owner: 'latheolivier',
+          name: 'gestion-ndf-avedji',
         },
         prerelease: true,
         draft: true,
